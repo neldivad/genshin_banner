@@ -12,8 +12,17 @@ import pytz
 from google.oauth2 import service_account
 import pygsheets
 
+#-----------------------
 from functions import app_functions
 
+# add folder as modules
+import sys, os.path
+func_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))+ '/function/') # name of function
+
+if func_dir not in sys.path:
+  sys.path.append(func_dir)
+
+#--------------------
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
