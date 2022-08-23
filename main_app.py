@@ -69,9 +69,5 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 st.write(rows)
 
 df = df_from_gsheet(sheet_url)
-st.write(df
-
-
-
-
+st.write(df)
 
