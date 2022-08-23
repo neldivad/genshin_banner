@@ -91,7 +91,7 @@ def make_timeline_chart(df, xstart, xend, ydata, cdata, ordering, legend=True):
   import plotly.express as px
 
   n = len(ordering)
-  height = 200 + 20*n
+  height = 100 + 20*n
 
   fig = px.timeline(
     df,
