@@ -16,3 +16,6 @@ def df_from_gsheet(spreadsheet_id, sheetname):
   worksheet = sh.worksheet(property= 'title', value= sheetname)
   df = worksheet.get_as_df()
   return df
+
+def test_write():
+  return st.write('fucntion called successfully')
