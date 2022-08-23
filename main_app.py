@@ -3,24 +3,14 @@ import streamlit.components.v1 as components
 from streamlit_player import st_player
 from streamlit_option_menu import option_menu
 
+from gsheetsdb import connect
 import pandas as pd
 import plotly
 
 from datetime import datetime
 import pytz
 
-from google.oauth2 import service_account
-import pygsheets
-
 #-----------------------
-from functions import app_functions
-
-# add folder as modules
-import sys, os.path
-func_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))+ '/functions/') # name of function
-
-if func_dir not in sys.path:
-  sys.path.append(func_dir)
 
 #--------------------
 hide_st_style = """
@@ -58,6 +48,9 @@ with st.sidebar:
     pass
   
 #----
-st.write( app_functions.test_write() )
+
+
+
+
 
 
