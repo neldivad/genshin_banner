@@ -31,7 +31,7 @@ def main():
   with st.sidebar:
     # st.image('assets/placeholder.jpg')
     # st.write('^ this is a placeholder image')
-    st.title('App Navigation')
+    # st.title('App Navigation')
 
     st.write('---')
     st.title('Resources')
@@ -112,7 +112,9 @@ def main():
   flat_color = flatten_dict(color_discrete_map_char)
   df['element'] = df['character'].map(flat_d)
 
-  st.write(df)
+  with st.expander('Data', expanded=False):
+    st.write(df)
+    
   ordering = list( df['character'].unique() )
 
   fig = make_timeline_chart(
