@@ -56,6 +56,8 @@ def main():
       st.write(f'Streamlit: {st.__version__}')
       st.write(f'Pandas: {pd.__version__}')
       pass
+    st.write('')
+    st.write('---')
 
   #----------------
   sheet_url = st.secrets['genshin_banner_gsheets_url']
