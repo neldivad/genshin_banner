@@ -35,7 +35,8 @@ def main():
   st.markdown(hide_st_style, unsafe_allow_html=True)    
   st.sidebar.write(' ')
   with st.sidebar:
-    # st.image('assets/placeholder.jpg')
+    st.subheader('Tired of waiting your banner? I know that feel...')
+    st.image('assets/miko.jpg')
     # st.write('^ this is a placeholder image')
     # st.title('App Navigation')
 
