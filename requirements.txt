@@ -1,5 +1,6 @@
 streamlit==1.11.1
 streamlit_player
+streamlit_option_menu
 plotly
 
 pygsheets
