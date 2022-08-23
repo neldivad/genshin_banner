@@ -36,7 +36,7 @@ def main():
   st.sidebar.write(' ')
   with st.sidebar:
     st.subheader('Tired of waiting your banner? I know that feel...')
-    st.image('assets/miko.jpg')
+    st.image('assets/qiqi.jpg')
     # st.write('^ this is a placeholder image')
     # st.title('App Navigation')
 
