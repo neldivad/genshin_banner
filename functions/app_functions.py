@@ -18,4 +18,4 @@ def df_from_gsheet(spreadsheet_id, sheetname):
   return df
 
 def test_write():
-  return st.write('fucntion called successfully')
+  return 'fucntion called successfully'
