@@ -18,7 +18,7 @@ from gsheetsdb import connect
 st.session_state.current_date = datetime.today().strftime('%Y-%m-%d')
 st.set_page_config(
   page_title="Genshin Impact | Banner Timeline",
-  # page_icon='assets/How_to_use_icon.svg.png',
+  page_icon='assets/miko.jpg',
   layout="wide",
   initial_sidebar_state="expanded",
 )
