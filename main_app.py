@@ -48,6 +48,19 @@ with st.sidebar:
     pass
   
 #----
+# Create a connection object.
+conn = connect()
+
+@st.cache(ttl=600)
+def run_query(query):
+  rows = conn.execute(query, headers=1)
+  rows = rows.fetchall()
+  return rows
+
+sheet_url = 'https://docs.google.com/spreadsheets/d/1EGl6QfXxbinI4z8WqJ80Gu5lyQhfUy9KuLVPJNaruIA/edit?usp=sharing'
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
+
+st.write(rows)
 
 
 
