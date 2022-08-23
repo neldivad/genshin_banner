@@ -17,7 +17,7 @@ from functions import app_functions
 
 # add folder as modules
 import sys, os.path
-func_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))+ '/function/') # name of function
+func_dir = (os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))+ '/functions/') # name of function
 
 if func_dir not in sys.path:
   sys.path.append(func_dir)
@@ -58,6 +58,6 @@ with st.sidebar:
     pass
   
 #----
-app_functions.test_write()
+st.write( app_functions.test_write() )
 
 
