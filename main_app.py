@@ -49,13 +49,7 @@ with st.sidebar:
   
 #----
 # Create a connection object.
-conn = connect()
-
-@st.cache(ttl=600)
-def run_query(query):
-  rows = conn.execute(query, headers=1)
-  rows = rows.fetchall()
-  return rows
+conn = connect() 
 
 @st.cache(ttl=600)
 def df_from_gsheet(url):
@@ -63,11 +57,8 @@ def df_from_gsheet(url):
   df_gsheet = pd.DataFrame(rows)
   return df_gsheet
 
-sheet_url = 'https://docs.google.com/spreadsheets/d/1EGl6QfXxbinI4z8WqJ80Gu5lyQhfUy9KuLVPJNaruIA/edit?usp=sharing'
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
-
-st.write(rows)
-
+sheet_url = st.secrets['genshin_banner_gsheets_url']
 df = df_from_gsheet(sheet_url)
+
 st.write(df)
 
