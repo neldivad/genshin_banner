@@ -3,4 +3,5 @@ streamlit_player
 streamlit_option_menu
 plotly
 
+gsheetsdb
 pygsheets
