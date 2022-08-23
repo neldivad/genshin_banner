@@ -51,7 +51,7 @@ def main():
       pass
 
   #----------------
-  sheet_url = 'https://docs.google.com/spreadsheets/d/1EGl6QfXxbinI4z8WqJ80Gu5lyQhfUy9KuLVPJNaruIA/edit?pli=1#gid=0'
+  sheet_url = st.secrets['genshin_banner_gsheets_url']
   df = df_from_gsheet(sheet_url)
   
   current_date = pd.to_datetime( st.session_state.current_date )
