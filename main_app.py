@@ -60,10 +60,10 @@ def main():
   sheet_url = 'https://docs.google.com/spreadsheets/d/1EGl6QfXxbinI4z8WqJ80Gu5lyQhfUy9KuLVPJNaruIA/edit?pli=1#gid=0'
   df = df_from_gsheet(sheet_url)
 
-  st.write(df)
+  # st.write(df)
 
   ordering = list( df['character'].unique() )
-  st.write(len(ordering))
+  # st.write(len(ordering))
 
   fig2 = make_timeline_chart(
     df,
