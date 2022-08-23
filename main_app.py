@@ -26,11 +26,8 @@ def main():
               </style>
               """
 
-  # st.markdown(hide_st_style, unsafe_allow_html=True)    
-
-  # st.write('^ this is a placeholder image')
-
-  # st.sidebar.write(' ')
+  st.markdown(hide_st_style, unsafe_allow_html=True)    
+  st.sidebar.write(' ')
   with st.sidebar:
     # st.image('assets/placeholder.jpg')
     # st.write('^ this is a placeholder image')
@@ -40,12 +37,11 @@ def main():
     st.title('Resources')
     with st.expander('Developed by', expanded=False):
       st.markdown("""
-      © QED Insights - All rights reserved
+      © u/neldivad - All rights reserved
       """)
     with st.expander('Contact', expanded=False):
       st.markdown("""
-      - [Linkedin](https://www.linkedin.com/in/divadlen/)
-      - [Email](dl.eeee.nv@gmail.com)
+      - [Medium](https://medium.com/@just_neldivad)
       - [Twitter](https://twitter.com/just_neldivad)
       """)
     with st.expander('Version', expanded=False):
@@ -134,7 +130,7 @@ def main():
 #----
 # Create a connection object.
 #------
-# @st.cache(ttl=600, allow_output_mutation=True)
+@st.cache(ttl=600, allow_output_mutation=True)
 def df_from_gsheet(url):
   import gsheetsdb
   conn = connect() 
@@ -205,10 +201,6 @@ def make_timeline_chart(df, xstart, xend, ydata, cdata, hdata, ordering, color_d
     rangeslider= dict(visible=True,),
   )
   fig.add_vline(x= st.session_state.current_date,line_dash= 'dot')
-  # fig.update_traces(
-  #   marker=dict(
-  #     color=['red', 'blue', 'green', 'yellow'])
-  # )
   return fig
 
 #-----------
