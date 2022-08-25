@@ -12,7 +12,7 @@ import pytz
 
 from gsheetsdb import connect
 
-#-------------------------------------------
+#--------------------------------------------
 # Run app 
 #-------------------------------------------
 st.session_state.current_date = datetime.today().strftime('%Y-%m-%d')
